@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #0f0f0f;
+  background-color: #f6f6f6;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+#app{
+  @apply h-full
+}
+
+html,body { height: 100%; margin: 0px; padding: 0px; overflow: hidden; }
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f6f6f6;
+    background-color: #2f2f2f;
+  }
+
+}
+
+.windowBtn {
+  -webkit-app-region: no-drag;
+
+  @apply flex text-center text-black transition-colors cursor-pointer items-center
+}
+
+.btn {
+  @apply bg-gray-700 font-bold px-3 py-1 rounded-md shadow-md shadow-gray-900 hover:brightness-150
+}
+
+.windowBar {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-app-region: drag;
+
+  height: 2rem;
+  min-height: 2rem;
+}
+
+
+::-webkit-scrollbar {
+  @apply w-2
+}
+::-webkit-scrollbar-track {
+  @apply bg-gray-600 rounded-md
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-yellow-300 rounded-md
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400
+}
