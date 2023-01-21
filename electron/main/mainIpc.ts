@@ -1,10 +1,10 @@
 import { app, BrowserWindow, ipcMain } from "electron";
-import { TimerEntry } from "../../src/types/TimerTypes";
-import { BrowserWindowOptions } from "../../src/types/UtilityTypes";
-import { TimerManager } from "./core/TimerManager";
-import { DataService } from "./core/util/DataService";
+import { TimerEntry } from "../../libs/timer/src/types";
+import { BrowserWindowOptions } from "../../libs/util/src/UtilityTypes";
+import { TimerManager } from "../../libs/timer/src/core/TimerManager";
+import { DataService } from "../../libs/persistence/src/DataService";
 import { join } from 'path'
-import { Timer } from "./core/Timer";
+import { Timer } from "../../libs/timer/src/core/Timer";
 
 export function init(mainWin: BrowserWindow) {
     const preload = join(__dirname, '../preload/index.js')

@@ -1,7 +1,7 @@
 import { contextBridge, ipcRenderer } from "electron";
-import { TimerStatus } from "../../src/types/Enums";
-import { TimerEntry } from '../../src/types/TimerTypes'
-import { BrowserWindowOptions } from "../../src/types/UtilityTypes";
+import { TimerStatus } from "../../libs/timer/src/enums";
+import { TimerEntry } from '../../libs/timer/src/types'
+import { BrowserWindowOptions } from "../../libs/util/src/UtilityTypes";
 
 contextBridge.exposeInMainWorld('windowApi', {
   close: () => ipcRenderer.send("windowApi:close"),

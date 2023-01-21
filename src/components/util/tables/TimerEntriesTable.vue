@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TimerEntry } from 'src/types/TimerTypes';
+import { TimerEntry } from '../../../../libs/timer/src/types';
 import { computed } from 'vue';
 
 const props = defineProps<{

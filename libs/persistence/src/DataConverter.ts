@@ -1,4 +1,4 @@
-import { TimerEntry } from "../../../../src/types/TimerTypes";
+import { TimerEntry } from "../../timer/src/types";
 
 export class Convert {
     public static toTimerEntries(json: string): TimerEntry[] {

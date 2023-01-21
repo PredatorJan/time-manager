@@ -16,6 +16,9 @@
   },
   "include": ["src"],
   "references": [
-    { "path": "./tsconfig.node.json" }
+    { "path": "./tsconfig.node.json" },
+    { "path": "./libs/timer" },
+    { "path": "./libs/util" },
+    { "path": "./libs/persistence" }
   ]
 }

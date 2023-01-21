@@ -1,7 +1,7 @@
-import type { TimerEntry } from "../../../src/types/TimerTypes";
-import { TimerStatus } from "../../../src/types/Enums";
+import type { TimerEntry } from "../types";
+import { TimerStatus } from "../enums";
 import { Timer } from "./Timer"
-import { DataService } from "./util/DataService"
+import { DataService } from "../../../persistence/src/DataService"
 
 export class TimerManager {
 
@@ -13,12 +13,10 @@ export class TimerManager {
 
     private timer: Timer = null
 
-    private saveInterval: NodeJS.Timer = null
-
     private constructor() {
         console.log("TimeManager - Start SaveDataJob");
         
-        this.saveInterval = setInterval(() => {
+        const saveInterval: NodeJS.Timer = setInterval(() => {
             console.log("SaveDataJob - Execute")
             const data: TimerEntry[] = []
 

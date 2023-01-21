@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { BrowserWindowOptions } from 'src/types/UtilityTypes';
+import { BrowserWindowOptions } from '../../libs/util/src/UtilityTypes';
 import { reactive } from 'vue';
-import { TimerStatus } from '../types/Enums';
-import { Time, TimerEntry } from '../types/TimerTypes';
+import { TimerStatus } from '../../libs/timer/src/enums';
+import { Time, TimerEntry } from '../../libs/timer/src/types';
 
 
-let updateInterval: NodeJS.Timer = null
+let updateInterval: NodeJS.Timer
 const timer = reactive({
     entry: {
         id: "-",

@@ -1,5 +1,5 @@
 import { readFileSync, writeFile, mkdirSync } from "node:fs";
-import { TimerEntry } from "../../../../src/types/TimerTypes";
+import { TimerEntry } from "../../timer/src/types";
 import { Convert } from "./DataConverter";
 
 export class DataService {

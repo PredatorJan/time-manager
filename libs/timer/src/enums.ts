@@ -1,4 +1,4 @@
-export enum TimerStatus {
+export const enum TimerStatus {
     DISABLED,
     STOPPED,
     RUNNING

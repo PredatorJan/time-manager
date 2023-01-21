@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import TimerEntriesTable from '../../components/util/tables/TimerEntriesTable.vue';
-import { TimerEntry } from '../../types/TimerTypes';
+import { TimerEntry } from '../../../libs/timer/src/types';
 import WindowTitleBar from '../../components/util/WindowTitleBar.vue';
 import { reactive } from 'vue';
-import { BrowserWindowOptions } from 'src/types/UtilityTypes';
+import { BrowserWindowOptions } from '../../../libs/util/src/UtilityTypes';
 
-let updateInterval: NodeJS.Timer = null
+let updateInterval: NodeJS.Timer
 let data = reactive({
     entries: [] as TimerEntry[]
 })

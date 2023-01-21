@@ -1,4 +1,4 @@
-import type { Time, TimerEntry } from "../../../src/types/TimerTypes";
+import type { Time, TimerEntry } from "../types";
 
 export class Timer {
 
